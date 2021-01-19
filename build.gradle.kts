@@ -77,8 +77,7 @@ publishing {
 				))
 				licenses {
 					license {
-						// todo
-						name.set("BSD 3-Clause License")
+						name.set("Apache License 2.0")
 						url.set("https://github.com/elex-project/dokkaebi/blob/main/LICENSE")
 					}
 				}

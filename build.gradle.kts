@@ -18,8 +18,8 @@ repositories {
 java {
 	withSourcesJar()
 	withJavadocJar()
-	sourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
-	targetCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
+	sourceCompatibility = org.gradle.api.JavaVersion.VERSION_11
+	targetCompatibility = org.gradle.api.JavaVersion.VERSION_11
 }
 
 configurations {
@@ -109,7 +109,7 @@ publishing {
 				password = project.findProperty("repo.password") as String
 			}
 		}
-		maven { //todo
+		maven {
 			name = "mavenGithub"
 			url = uri("https://maven.pkg.github.com/elex-project/dokkaebi")
 			credentials {
@@ -132,4 +132,3 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter:5.7.0")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
 }
-
